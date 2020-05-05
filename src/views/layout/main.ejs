@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">Passport Node Mongodb</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <% if(user){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Salir</a>
+                        </li>
+                    <% }else {%>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signin">Signin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup">Signup</a>
+                        </li>
+                    <% }%>    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <% if(signupMessage.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= signupMessage %>
+            </div>
+        <% } %>
+    
+        <% if(signinMessage.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= signinMessage %>
+            </div>
+        <% } %>
+        
+        <%- body %>
+    </div>
+</body>
+</html>
