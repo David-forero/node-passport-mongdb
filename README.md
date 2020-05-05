@@ -1,7 +1,7 @@
 # node-passport-mongdb
 A system about accounts using passport local
 
-# Screenshop
+# Screenshot
 
 ![Captura de pantalla (25)](https://user-images.githubusercontent.com/54685136/81039629-95945480-8e77-11ea-9315-0714c8281f9d.png)
 
